@@ -1,0 +1,37 @@
+
+extends layout
+
+block content
+	nav.navbar.navbar-expand.navbar-light.bg-light
+		.nav-item
+			.navbar-brand Control Panel
+		.navbar-nav
+			.nav-item
+				button.btn.navbar-btn.btn-outline-dark#btn-data show Data
+		.navbar-nav
+			.nav-item
+				button.btn.navbar-btn.btn-outline-dark#btn-user show User
+		.navbar-nav
+			.nav-item
+				button.btn.navbar-btn.btn-outline-dark#btn-update Update
+		.navbar-nav
+			.nav-item
+				button.btn.navbar-btn.btn-outline-dark#btn-account account
+
+
+
+		.navbar-nav.ml-auto
+			.nav-item
+				button.btn.navbar-btn.btn-outline-dark#btn-logout Sign Out
+
+	include account
+	include modals/alert
+	include modals/confirm
+	//include datas
+
+
+
+block scripts
+	script(src='/js/views/home.js')
+	script(src='/js/controllers/homeController.js')
+	script(src='/js/form-validators/accountValidator.js')

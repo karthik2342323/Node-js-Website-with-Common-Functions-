@@ -1,0 +1,79 @@
+
+extends layout
+
+block content
+
+	include data_1_header
+	include modals/alert
+
+
+
+
+
+	// see this parse data res.render('print', { title : 'Account List', accts : data ,time:time_diff });
+	.form-group.row
+		label.col-sm-1.col-form-label.col-form-label-sm Fetch Time
+		.col-sm-2
+			input.form-control#name-tf(type='text', name="Fetch Time", value= time+"  Sec")
+
+
+
+
+
+
+
+
+
+
+
+	div.container(style='margin:20px auto')
+		table.table.table-bordered.table-striped
+			thead.thead-dark
+				tr
+					th(style='width:50px;text-align:center') #
+					th(style='width:220px') Name
+					th(style='width:240px') Gene
+					th(style='width:240px') Protein_change
+					th(style='width:240px') Condition
+					th(style='width:240px') Clinical_significance
+					th(style='width:240px') PSA
+					th(style='width:240px') DRE
+					th(style='width:240px') Review_status
+					th(style='width:240px') Accession
+					th(style='width:240px') GRCh37Chromosome
+					th(style='width:240px') GRCh37Location
+					th(style='width:240px') GRCh38Chromosome
+					th(style='width:240px') GRCh38Location
+					th(style='width:240px') VariationID
+					th(style='width:240px') AlleleID
+					th(style='width:240px') dbSNP_ID
+					th(style='width:240px') Canonical_SPDI
+
+
+			tbody
+			- for (var i = 0; i < accts.length; i++)
+				tr
+					td(style='text-align:center')= i+1
+					td= accts[i].Name
+					td= accts[i].Gene
+					td= accts[i].Protein_change
+					td= accts[i].Condition
+					td= accts[i].Clinical_significance
+					td= accts[i].PSA
+					td= accts[i].DRE
+					td= accts[i].Review_status
+					td= accts[i].Accession
+					td= accts[i].GRCh37Chromosome
+					td= accts[i].GRCh37Location
+					td= accts[i].GRCh38Chromosome
+					td= accts[i].GRCh38Location
+					td= accts[i].VariationID
+					td= accts[i].AlleleID
+					td= accts[i].dbSNP_ID
+					td= accts[i].Canonical_SPDI
+
+
+block scripts
+	script(src='/js/views/print.js')
+	script(src='/js/controllers/homeController.js')
+

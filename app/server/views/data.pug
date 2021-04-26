@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    include data_1_header
+    include modals/alert
+    include modals/form-errors
+    div.container(style='margin:20px auto')
+        table.table.table-bordered.table-striped
+            thead.thead-dark
+                tr
+                    th(style='width:50px;text-align:center') #
+                    th(style='width:220px') Name
+                    th(style='width:220px') Username
+                    th(style='width:240px') Location
+                    th Account Created
+            tbody
+                // Why we are doing conversion because data is not recognizing
+            - for (var i = 0; i < accts.length; i++)
+                // convert to string
+                - var x=JSON.stringify(accts[i]);
+                // convert to Json
+                - x=JSON.parse(x);
+                tr
+                td(style='text-align:center')= i + 1
+                td= x.name
+                td= x.user
+                td= x.country
+                td= x.date
+
+
+block scripts
+    script(src='/js/controllers/homeController.js')
+    script(src='/js/views/data.js')
+

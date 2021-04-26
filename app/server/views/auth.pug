@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    include modals/alert
+    include modals/auth-model
+
+block scripts
+    script(src='/js/views/auth.js')
+    script(src='/js/form-validators/authValidator.js')

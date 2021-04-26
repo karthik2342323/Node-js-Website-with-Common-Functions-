@@ -1,0 +1,118 @@
+
+extends layout
+
+
+block content
+    include data_1_header
+    include modals/alert
+    #form.center-vertical
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        br
+        form.card.card-body.bg-light(method='post')
+            h4 Enter to corresponding Field for Adding Data to Database
+            h6Please Field are below
+            .form-group
+                label Name
+                input.form-control(type='text', id='Name', name='Name')
+            .form-group
+                label Gene
+                input.form-control(type='text', id='Gene', name='Gene')
+            .form-group
+                label Protein change
+                input.form-control(type='text', id='Protein_change', name='Protein_change')
+            .form-group
+                label Clinical significance
+                input.form-control(type='text', id='Clinical_significance', name='Clinical_significance')
+            .form-group
+                label PSA
+                input.form-control(type='text', id='PSA', name='PSA')
+            .form-group
+                label DRE
+                input.form-control(type='text', id='DRE', name='DRE')
+            .form-group
+                label Review status
+                input.form-control(type='text', id='Review_status', name='Review_status')
+            .form-groupAccession
+                label Accession
+                input.form-control(type='text', id='Accession', name='Accession')
+            .form-groupAccession
+                label GRCh37Chromosome
+                input.form-control(type='text', id='GRCh37Chromosome', name='GRCh37Chromosome')
+            .form-groupAccession
+                label GRCh37Location
+                input.form-control(type='text', id='GRCh37Location', name='GRCh37Location')
+            .form-groupAccession
+                label GRCh38Chromosome
+                input.form-control(type='text', id='GRCh38Chromosome', name='GRCh38Chromosome')
+            .form-groupAccession
+                label GRCh38Location
+                input.form-control(type='text', id='GRCh38Location', name='GRCh38Location')
+            .form-groupAccession
+                label VariationID
+                input.form-control(type='text', id='VariationID', name='VariationID')
+            .form-groupAccession
+                label AlleleID
+                input.form-control(type='text', id='AlleleID', name='AlleleID')
+            .form-groupAccession
+                label dbSNP ID
+                input.form-control(type='text', id='dbSNP_ID', name='dbSNP_ID')
+            .form-groupAccession
+                label Canonical SPDI
+                input.form-control(type='text', id='Canonical_SPDI', name='Canonical_SPDI')
+
+
+
+            br
+            center
+            #row1
+                button(type='submit')#btn_sign_in.btn.btn-primary
+                    | submit
+
+
+    //include modals/alert
+    //include modals/lost-password
+block scripts
+    script(src='/js/views/form.js')
+    script(src='/js/form-validators/formValidator.js')
+    script(src='/js/controllers/homeController.js')
+    script(src='/js/views/form_1.js')
+

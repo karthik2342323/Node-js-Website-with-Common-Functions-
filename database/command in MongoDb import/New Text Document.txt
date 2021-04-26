@@ -1,0 +1,1 @@
+mongoimport -d exp_1 -c cancer_data --type csv --file "C:\Users\karthik makwana\Desktop\NODE JS\node-login-master\node-login-master\database\Updated Row Db\random.csv" --headerline
