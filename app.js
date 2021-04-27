@@ -1,9 +1,4 @@
 
-/**
-	* Node.js Login Boilerplate
-	* More Info : https://github.com/braitsch/node-login
-	* Copyright (c) 2013-2020 Stephen Braitsch
-**/
 
 var http = require('http');
 var express = require('express');
