@@ -727,7 +727,7 @@ var tokenGenerator=function ()
 	// for debugging
 
 
-	var passwd="9892347514kar@";
+	var passwd="random123456789087654";
 	var char=String.fromCharCode(122);
 	var salt="fj3j4ndk3j";
 	var counter_1=0;
